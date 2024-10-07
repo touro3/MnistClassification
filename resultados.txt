@@ -1,0 +1,20 @@
+SGDClassifier: 
+Confusion Matrix:
+ [[53892   687]
+ [ 1891  3530]]
+Precision: 0.8371
+Recall: 0.6512
+F1-Score: 0.7325
+
+SGD + OvR:
+Classe predita do numero: [7]
+Scores de decisão para some_digit: [[ -949.46098921 -1430.94893173 -1055.0107411   -355.10484317
+   -948.53765327  -550.51382892 -1997.64457425   184.51270763
+   -295.69944661  -152.026094  ]]
+Classe predita: 7
+Accuracy (cross-validation): [0.90015 0.89525 0.9055 ]
+Average Accuracy: 0.9003
+
+Melhor estratégia: One-vs-Rest (OvR) com SGDClassifier teve um bom desempenho, com uma acurácia média de 89.7%. Essa abordagem é rápida, eficiente e adequada para grandes conjuntos de dados como o MNIST.
+Justificativa: O SGDClassifier é otimizado para grandes datasets e, como o MNIST tem muitas amostras e é multiclasse, a estratégia OvR é suficiente. 
+Além disso, a complexidade computacional de One-vs-One (OvO) pode não compensar o ganho de desempenho no MNIST, onde as classes são razoavelmente bem separadas e OvR já alcança uma alta acurácia.
